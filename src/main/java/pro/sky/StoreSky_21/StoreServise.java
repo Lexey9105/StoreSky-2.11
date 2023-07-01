@@ -5,7 +5,7 @@ import java.util.List;
 
 public interface StoreServise {
 
-    void add(Integer id);
+    List<Integer>  add(List<Integer> ids);
 
     List<Integer> get();
 }

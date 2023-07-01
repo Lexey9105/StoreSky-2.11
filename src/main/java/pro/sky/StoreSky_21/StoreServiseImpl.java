@@ -16,10 +16,15 @@ public class StoreServiseImpl implements StoreServise {
     }
 
     @Override
-    public void add(Integer id) {
-        if (storeStorage.contains(id)){throw new ProductAlreadyAddedExeption();}
-        storeStorage.add(id);
-    }
+    public List<Integer>  add(List<Integer> ids) {
+        for(Integer i=0;i<ids.size();i++){
+            if (!storeStorage.contains(ids.get(i))){storeStorage.add(ids.get(i));}
+            else {ids.remove(i);}
+            }
+        return storeStorage;
+        }
+
+
 
     @Override
     public List<Integer> get() {

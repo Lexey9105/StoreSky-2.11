@@ -16,9 +16,9 @@ public class StoreController {
         this.storeServise=storeServise;
     }
     @GetMapping("/add")
-    public Integer add(@RequestParam Integer id){
-        storeServise.add(id);
-        return id;
+    public List<Integer>  add(@RequestParam List<Integer> ids){
+        storeServise.add(ids);
+        return storeServise.add(ids);
     }
     @GetMapping("/get")
     public List<Integer> get(){
